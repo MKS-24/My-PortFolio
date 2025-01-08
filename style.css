@@ -1,0 +1,226 @@
+body {
+    background-color: black;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+}
+
+@keyframes moveRight {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+@keyframes moveLeft {
+    0% {
+        right: 100%;
+    }
+
+    100% {
+        right: 0%;
+    }
+}
+
+.My_logo {
+    height: 15.5vh;
+    display: flex;
+    justify-content: center;
+}
+
+.mylogo {
+    /* background-color: yellow; */
+    /* margin: auto; */
+    position: absolute;
+    /*animation: moveRight 5s linear 1s; */
+    animation: opacity 5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18vh;
+    height: 15.5vh;
+    border-radius: 50%;
+    padding: 1vh 0vh 1vh 0vh;
+    overflow: hidden;
+    box-shadow: 0vh 0vh 5vh white;
+}
+
+.mylogo>img {
+    height: 5em;
+    /* box-shadow: 0vh 0vh 5vh white; ; */
+}
+
+.navbar {
+    margin-top: 3vh;
+    display: flex;
+    justify-content: center;
+}
+
+.navbox {
+    z-index: 999;
+    position: absolute;
+    animation: moveRight 3s ease-out;
+    /* border: 1px solid white; */
+    margin-top: 1vh;
+    padding: 1vh 2vh 0.5vh 2vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    /* row-gap: 1vh; */
+    column-gap: 1vh;
+}
+
+.navbar-items {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.navbar-items>a {
+    text-decoration: underline;
+    color: #ffffff;
+    font-size: 1em;
+    border: 1px solid transparent;
+    padding: 1vh 2vh 1vh 2vh;
+    transition: all 0.5s ease;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.navbar-items>a:hover {
+    border: 1px solid white;
+    border-radius: 1em;
+    text-decoration: overline;
+    box-shadow: 0vh 0vh 5vh white;
+    opacity: 0.7;
+    font-weight: 600;
+    padding: 1vh 2vh 1vh 2vh;
+}
+
+@media (min-width: 600px) {
+    @keyframes moveRight {
+        0% {
+            left: 100%;
+        }
+
+        50% {
+            left: 15%;
+        }
+        100% {
+            left: 2%;
+        }
+    }
+}
+@media (min-width: 768px) {
+    @keyframes moveRight {
+        0% {
+            left: 100%;
+        }
+
+        100% {
+            left: 9%;
+        }
+    }
+}
+@media (min-width: 1024px) {
+    @keyframes moveRight {
+        0% {
+            left: 100%;
+        }
+
+        100% {
+            left: 20%;
+        }
+    }
+}
+@media (min-width: 1440px) {
+    @keyframes moveRight {
+        0% {
+            left: 100%;
+        }
+
+        100% {
+            left: 27.5%;
+        }
+    }
+}
+
+
+.Home-video {
+    margin-top: 19vh; 
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    /* position: relative;
+    top: 4vh; */
+}
+.video{
+    background-color: black;
+    box-shadow: 0vh 1vh 0vh white;
+    border-bottom-right-radius: 0.55em;
+    border-bottom-left-radius: 0.55em;
+}
+.home-video {
+    background-color: black;
+    animation: opacity 5s ease-in-out;
+    height: 25vh;
+}
+
+.resume-section{
+    margin-top: 5vh;
+    display: flex;
+    font-size: 1.1em;
+    justify-content: center;
+}
+
+.resume-link{
+    color: white;
+    text-decoration:none;
+    font-weight: 600;
+    border: 1px solid transparent;
+    padding: 1.5vh 2vh 1.5vh 2vh;
+    transition: all 1s ease;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    /* border-bottom: 1px solid; */
+}
+.resume-link:hover{
+    border: 1px solid white;
+    border-radius: 30px;
+    opacity: 0.7;
+    text-decoration: overline;
+}
+@keyframes updown{
+    0% {
+        transform: rotate(90deg) translateX(0vh); /* Original position */
+        opacity: 0.5;
+    }
+    50% {
+        transform: rotate(90deg) translateX(1vh); /* Move down */
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(90deg) translateX(0vh); /* Back to original position */
+        opacity: 0.5;
+    }
+}
+.arrow-div{
+    animation: updown 1s ease-in-out infinite;
+    /* animation: opacity 3s ease-in-out infinite; */
+    height: 6vh;
+    width: 6vh;
+    background-image: url(Arrow.png);
+    background-size: cover;
+    margin: auto;
+    margin-top:8vh;
+}
